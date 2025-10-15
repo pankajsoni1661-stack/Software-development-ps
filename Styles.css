@@ -1,0 +1,230 @@
+/* Basic reset - I always start with this to avoid browser weirdness */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Went with Arial for a clean look */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar styles - Made it sticky for better user experience */
+header {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth hover effect - I think this adds polish */
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Gold color; it stands out nicely */
+}
+
+.hamburger {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; /* Shows on mobile - my fix for smaller screens */
+    }
+}
+
+/* Hero Banner - I centered everything for a dramatic effect */
+#hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* This makes buttons scale - one of my favorite parts */
+}
+
+.buy-now {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.learn-more {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Subtle scale on hover; feels interactive */
+}
+
+/* Features Section - Used Grid for the cards; it's responsive out of the box */
+#features {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Hover effect to make it engaging */
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #ffd700;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Feedback Section - Kept it simple with cards */
+#feedback {
+    background-color: #e9e9e9;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#feedback h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feedback-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feedback-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer - Nothing fancy, just functional */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.social-icons {
+    margin: 1rem 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 0.5rem;
+}
