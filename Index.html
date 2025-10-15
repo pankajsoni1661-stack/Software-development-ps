@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Always include this for responsiveness -->
+    <title>FitWatch - My Fitness Tracker Landing Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linked my CSS file here -->
+</head>
+<body>
+    <!-- Navbar - I kept this sticky so it stays at the top while scrolling -->
+    <header>
+        <nav>
+            <div class="logo">FitWatch</div> <!-- Simple logo; I might swap this for an image later -->
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">&#9776;</div> <!-- Hamburger icon for mobile; quick and easy toggle -->
+        </nav>
+    </header>
+
+    <!-- Hero Banner - I picked a cool background image to grab attention -->
+    <section id="hero" style="background-image: url('assets/background.jpg');">
+        <div class="hero-content">
+            <h1>Track Your Fitness Like Never Before</h1> <!-- Bold headline to hook the user -->
+            <p>Advanced smartwatch features for health monitoring, activity tracking, and more. Stay fit with FitWatch.</p>
+            <div class="cta-buttons">
+                <button class="btn buy-now">Buy Now</button> <!-- Added hover effect in CSS; makes it feel clickable -->
+                <button class="btn learn-more">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - I used a grid to show off the product attributes -->
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img src="assets/feature1.jpg" alt="Heart Rate Monitoring">
+                <h3>Heart Rate Monitoring</h3>
+                <p>Real-time heart rate tracking with accuracy. Great for workouts.</p> <!-- Kept descriptions short and sweet -->
+                <p class="price">$49.99</p>
+            </div>
+            <div class="feature-card">
+                <img src="assets/feature2.jpg" alt="Step Counter">
+                <h3>Step Counter</h3>
+                <p>Accurate step tracking with daily goals. Syncs with your phone.</p>
+                <p class="price">$39.99</p>
+            </div>
+            <div class="feature-card">
+                <img src="assets/feature3.jpg" alt="Sleep Tracking">
+                <h3>Sleep Tracking</h3>
+                <p>Monitors sleep patterns for better rest. Includes analysis.</p>
+                <p class="price">$29.99</p>
+            </div>
+            <div class="feature-card">
+                <img src="assets/feature4.jpg" alt="Waterproof Design">
+                <h3>Waterproof Design</h3>
+                <p>IP68 rated for water resistance. Wear it anywhere.</p>
+                <p class="price">$19.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Feedback Section - I added this as a bonus; makes the page feel more real -->
+    <section id="feedback">
+        <h2>User Feedback</h2>
+        <div class="feedback-grid">
+            <div class="feedback-card">
+                <p>"This watch changed my routine! Accurate and easy." - John D.</p>
+                <p>Rating: ★★★★☆</p> <!-- Simple stars; I might use icons if I expand this -->
+            </div>
+            <div class="feedback-card">
+                <p>"Great for sleep tracking—worth every penny." - Sarah K.</p>
+                <p>Rating: ★★★★★</p>
+            </div>
+            <div class="feedback-card">
+                <p>"Comfortable and reliable daily driver." - Mike R.</p>
+                <p>Rating: ★★★★☆</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Basic links and social icons; I kept it simple -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2023 FitWatch. All rights reserved.</p> <!-- Standard footer text -->
+    </footer>
+
+    <script>
+        // Quick JS for the hamburger menu - I added this to make it mobile-friendly
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
