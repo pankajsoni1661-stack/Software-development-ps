@@ -54,7 +54,6 @@ By adapting the methodology from this paper, we achieved significant architectur
 
 ## Folder Structure
 
-```text
 clstm_rl_pipeline/
 ├── config.py                      
 ├── phase1_data_extraction.py      
@@ -71,8 +70,8 @@ clstm_rl_pipeline/
 
 Quick Start
 1. Install dependencies
-Bash
 pip install -r requirements.txt
+
 GPU Acceleration (Optional):
 
 Bash
