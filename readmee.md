@@ -14,6 +14,27 @@ with a continuous action space.
 
 ---
 
+## Motivation & Research Foundation
+
+Traditional deep reinforcement learning (DRL) methods were largely developed for gaming environments. When directly adapted to financial data—which is highly noisy, uneven, and influenced by dynamic external factors—standard models often fall short. 
+
+To overcome these limitations, this project implements a **Cascaded LSTM (CLSTM)** architecture, heavily inspired by recent academic research. 
+
+### The Reference Paper
+The foundational concepts for our architecture are derived from the following paper, which is also included in this repository:
+
+* **Source:** Jie Zou et al., ["A Novel Deep Reinforcement Learning Based Automated Stock Trading System Using Cascaded LSTM Networks" (View/Download PDF)](https://arxiv.org/pdf/2212.02721.pdf)
+* **Local File:** `2212.02721v2.pdf`
+
+### How This Paper Helped Us
+By adapting the methodology from this paper, we achieved significant architectural improvements over standard neural networks (MLPs):
+
+* **Handling Partial Observability:** Financial trading is a partially observable Markov decision process (POMDP) because raw features do not represent the complete state of the market. The paper demonstrated that using an LSTM as a feature extractor uncovers hidden time-series patterns, making the environment behave much closer to a fully observable MDP.
+* **The Cascaded Advantage:** Instead of a standard stacked LSTM, the paper introduced a *cascaded* approach. An initial LSTM extracts time-series features from raw daily data, and these refined, encoded features are passed alongside the raw data to the PPO agent (which utilizes a second LSTM). This improves gradient flow and allows learning at multiple temporal scales.
+* **Proven Superiority:** The research proved that CLSTM-PPO models consistently outperform standard PPO, MLP baselines, and complex ensemble strategies in key metrics like cumulative returns, maximum earning rates, and Sharpe ratios.
+
+---
+
 ## Architecture Summary
 
 ```
